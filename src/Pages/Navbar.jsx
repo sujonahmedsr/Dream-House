@@ -21,7 +21,7 @@ const Navbar = () => {
                     <li className="text-lg font-medium hover:text-blue-500 duration-300 mx-5 my-5 md:my-0"><Link>Contact</Link></li>
                 </ul>
                 <div className="space-x-5">
-                    <Link className="text-lg font-medium hover:text-blue-500 duration-300 ">Login</Link>
+                    <Link to={'/login'} className="text-lg font-medium hover:text-blue-500 duration-300 ">Login</Link>
                 </div>
             </nav>
         </div>
