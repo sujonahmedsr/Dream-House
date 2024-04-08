@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 const Login = () => {
+    let location = useLocation();
+    document.title = location.pathname.slice(1);
     return (
         <div className="py-10 ">
             <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-white text-blue-600 shadow-2xl">

@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 const SignUp = () => {
+    let location = useLocation();
+    document.title = location.pathname.slice(1);
     return (
         <div className="py-5">
             <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-white text-blue-600 shadow-2xl">
-                <h1 className="text-2xl font-bold text-center">Login</h1>
+                <h1 className="text-2xl font-bold text-center">Sign Up</h1>
                 <form noValidate="" action="" className="space-y-6">
                     <div className="space-y-1 text-base">
                         <label htmlFor="name" className="block ">Your Name</label>
@@ -24,7 +27,7 @@ const SignUp = () => {
                     </div>
                     <div className="space-y-1 text-base">
                         <label htmlFor="password" className="block ">Confirm Password</label>
-                        <input type="password" name="password" id="password" placeholder="Confirm Password" className="w-full px-4 py-3 rounded-md border-gray-700 text-black" />
+                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" className="w-full px-4 py-3 rounded-md border-gray-700 text-black" />
                     </div>
                     <button className="block w-full p-3 text-center rounded-sm bg-blue-500 text-white">Sign Up</button>
                 </form>
