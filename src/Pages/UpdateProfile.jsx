@@ -1,33 +1,25 @@
-import { updateProfile } from 'firebase/auth';
 import profile from '../../src/assets/profile.png'
 import { useLocation } from 'react-router-dom';
-import auth from '../firebase/Firebase';
 import { toast } from 'react-toastify';
-import { useContext } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import { useContext } from 'react';
 
 const UpdateProfile = () => {
     let location = useLocation();
     document.title = `Dream House | ${location.pathname.slice(1)}`
 
+    const { user, updatYourProfile } = useContext(AuthContext);
+
     const notify = ()=> toast('Your profile update successfully')
-
-    const {user} = useContext(AuthContext);
-    console.log(user.displayName);
-
 
     const handleUpdateProfile = (e)=>{
         e.preventDefault()
         const from = new FormData(e.currentTarget)
         const name = from.get('name');
-        const photo = from.get('photo')
+        const photo = from.get('photo');
         
-        updateProfile(auth.currentUser,{
-            displayName: name,
-            photoURL: photo,
-        } ,
+        updatYourProfile(name, photo)
         notify()
-    )
     }
     
     return (
@@ -42,11 +34,11 @@ const UpdateProfile = () => {
                     <p className="pt-2 pb-4">You can update your name or profile picture</p>
                     <label className="block">
                         <span className="mb-1">Full name</span>
-                        <input type="text" name='name' placeholder="Your full name" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 px-4 py-3" />
+                        <input type="text" name='name' defaultValue={user?.displayName} placeholder="Your full name" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 px-4 py-3" />
                     </label>
                     <label className="block">
                         <span className="mb-1">Photo Url</span>
-                        <input type="text" name='photo' placeholder="photo Url" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 px-4 py-3" />
+                        <input type="text" name='photo' defaultValue={user?.photoURL} placeholder="photo Url" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 px-4 py-3" />
                     </label>
 
                     <input className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-blue-600 text-white w-full" type="submit" value="Update Profile"/>

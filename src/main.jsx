@@ -16,6 +16,7 @@ import Home from './Pages/Home.jsx';
 import About from './Pages/About.jsx';
 import Contact from './Pages/Contact.jsx';
 import UpdateProfile from './Pages/UpdateProfile.jsx';
+import Private from './PrivateRoute/Private.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,10 @@ const router = createBrowserRouter([
       },
       {
         path: '/update',
-        element: <UpdateProfile></UpdateProfile>
+        element: <Private>
+          <UpdateProfile></UpdateProfile>
+        </Private>
+        
       }
     ]
   },

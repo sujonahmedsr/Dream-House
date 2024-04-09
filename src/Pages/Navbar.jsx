@@ -4,7 +4,6 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import profile from '../../src/assets/profile.png'
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -45,7 +44,7 @@ const Navbar = () => {
                             <>
                                 <button onClick={() => setOpenProfile(!openProfile)} type="button" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                                     <span className="sr-only">Open user menu</span>
-                                    <img className="w-8 h-8 rounded-full" src={user.photoURL ? user.photoURL : {profile}} alt="user photo" />
+                                    <img className="w-8 h-8 rounded-full" src={user.photoURL ? user.photoURL : '../../src/assets/noUser.png'} alt="user photo" />
                                 </button>
                                 <div className={`z-50 ${openProfile ? '' : 'hidden'} my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600 absolute right-5`}>
                                     <div className="px-4 py-3 space-y-2">
