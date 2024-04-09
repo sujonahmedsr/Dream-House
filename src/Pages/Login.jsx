@@ -5,14 +5,19 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../firebase/Firebase";
 import { FaRegEye, FaEyeSlash } from "react-icons/fa";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     let location = useLocation();
-    document.title = location.pathname.slice(1);
+    document.title =  `Dream House | ${location.pathname.slice(1)}`;
+
 
     const [error, setError] = useState(null);
 
     const { signInUser } = useContext(AuthContext);
+
+    const notify = ()=> toast('you sign up successfully')
 
     const handleSignIn = (e) => {
         e.preventDefault();
@@ -22,7 +27,9 @@ const Login = () => {
 
         signInUser(email, password)
             .then(res => {
+                notify()
                 console.log(res.user);
+                
             })
             .catch(error => setError(error))
     }
@@ -35,6 +42,7 @@ const Login = () => {
         signInWithPopup(auth, googleProvider)
             .then(res => {
                 console.log(res.user);
+                notify();
             })
             .catch(error => setError(error))
     }
@@ -44,8 +52,9 @@ const Login = () => {
         signInWithPopup(auth, githubProvider)
             .then(res => {
                 console.log(res.user);
+                notify()
             })
-            .catch(error => setError(error.message));
+            .catch(error => console.log(error));
     }
 
     const [show, setShow] = useState(null);

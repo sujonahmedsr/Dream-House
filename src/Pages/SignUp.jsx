@@ -5,15 +5,18 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import auth from "../firebase/Firebase";
 import { FaRegEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 const SignUp = () => {
     const { createUser } = useContext(AuthContext);
     let location = useLocation();
-    document.title = location.pathname.slice(1);
+    document.title =  `Dream House - ${location.pathname.slice(1)}`;
 
     const [show, setShow] = useState(false)
     const [error, setError] = useState(null);
     const [errorRes,setErrorRes] = useState(null)
+
+    const notify = ()=> toast('you sign up successfully')
 
     const handleSignOut = (e) => {
         e.preventDefault();
@@ -27,28 +30,25 @@ const SignUp = () => {
 
 
         if (password !== confirmPassword) {
-            setError('password did not match')
-            return;
+            return setError('password did not match')
         }
-        else if(password < 6){
-            setError('Your password should be 6 character')
+        if(password.length < 6){
+            return setError('Your password should be 6 character')
+        }
+        if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/.test(password)){
+            setError('your password should be one uppercase and one lowercase and at least one numer')
             return
         }
-        // else if(!(?=.*?[A-Z]).text(confirmPassword)){
-        //     setError('your password should be one uppercase and one lowercase and at least one numer')
-        //     return
-        // }
-
-
-        console.log(name, email, photoUrl, password, confirmPassword);
 
         createUser(email, confirmPassword)
             .then(result => {
+                notify()
                 console.log(result.user);
                 updateProfile(auth.currentUser, {
                     displayName: name,
                     photoURL: photoUrl
                 })
+                
             })
         .catch(error => setErrorRes(error.message))
     }
