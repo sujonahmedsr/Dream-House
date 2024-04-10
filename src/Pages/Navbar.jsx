@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 import { FaBars, FaMinus } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
+// import { CgProfile } from "react-icons/cg";
+import { CgMail } from "react-icons/cg";
+import { IoIosLogOut } from "react-icons/io";
+import { FaUserEdit } from "react-icons/fa";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
@@ -10,13 +14,13 @@ const Navbar = () => {
     const [openProfile, setOpenProfile] = useState(false);
     const { user, logOut } = useContext(AuthContext);
 
-    const notify = ()=> toast('you logged out successfully')
+    const notify = () => toast('you logged out successfully')
 
     const handleLogOut = () => {
         logOut()
         notify()
     }
-    
+
     return (
         <div className=" bg-white text-black shadow-xl z-10 px-3 fixed right-0 left-0">
             {/* <ToastContainer/> */}
@@ -34,31 +38,46 @@ const Navbar = () => {
                     <li className="text-lg font-medium hover:text-blue-500 duration-300 mx-5 my-5 md:my-0"><Link to={'/about'}>About Us</Link></li>
                     <li className="text-lg font-medium hover:text-blue-500 duration-300 mx-5 my-5 md:my-0"><Link to={'/contact'}>Contact</Link></li>
 
-                    {
-                        user && <li className="text-lg font-medium hover:text-blue-500 duration-300 mx-5 my-5 md:my-0"><Link to={'/update'}>Update Profile</Link></li>
-                    }
+                    {/* {
+                        user && 
+                    } */}
+                    
                 </ul>
                 <div className="space-x-5">
-                    {
-                        user ?
-                            <>
-                                <button onClick={() => setOpenProfile(!openProfile)} type="button" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-                                    <span className="sr-only">Open user menu</span>
-                                    <img className="w-8 h-8 rounded-full" src={user.photoURL ? user.photoURL : '../../src/assets/noUser.png'} alt="user photo" />
-                                </button>
-                                <div className={`z-50 ${openProfile ? '' : 'hidden'} my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600 absolute right-5`}>
-                                    <div className="px-4 py-3 space-y-2">
-                                        <p className="block text-base text-gray-900 dark:text-white font-bold">{user.displayName ? user.displayName : 'Name Not Found'}</p>
-                                        <p className="block text-base  text-gray-500 truncate dark:text-gray-400">{user.email}</p>
-                                        <button onClick={handleLogOut} className="text-lg font-medium hover:text-blue-500 duration-300 pt-5 text-center">LogOut</button>
-                                    </div>
+                        {
+                            user ?
+                                <>
+                                    <button onClick={() => setOpenProfile(!openProfile)} type="button" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                                        <span className="sr-only">Open user menu</span>
+                                        <img className="w-8 h-8 rounded-full" src={user.photoURL ? user.photoURL : '../../src/assets/noUser.png'} alt="user photo" />
+                                    </button>
+                                    <div className={`z-50 ${openProfile ? '' : 'hidden'} my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600 absolute right-5`}>
+                                        <div className="px-4 py-3 space-y-3">
+                                            <div className="flex gap-3 items-center my-4">
+                                                {/* <CgProfile className="text-xl"></CgProfile> */}
+                                                <img className="w-10 rounded-full" src={user.photoURL ? user.photoURL : '../../src/assets/noUser.png'} alt="" />
+                                                <p className="block text-base text-gray-900 dark:text-white font-bold">{user.displayName ? user.displayName : 'Name Not Found'}</p>
+                                            </div>
+                                            <div className="flex items-center gap-3 my-4">
+                                                <CgMail className="text-xl"></CgMail>
+                                                <p className="block text-base  text-gray-500 truncate dark:text-gray-400">{user.email}</p>
+                                            </div>
+                                            <div className="flex items-center gap-3 my-4">
+                                                <FaUserEdit className="text-xl"></FaUserEdit>
+                                                <li className="text-base font-medium hover:text-blue-500 duration-300  "><Link to={'/update'}>Update Profile</Link></li>
+                                            </div>
+                                            <div className="flex items-center gap-3 my-4  pt-3 text-blue-500">
+                                                <IoIosLogOut className="text-xl"></IoIosLogOut>
+                                                <button onClick={handleLogOut} className="text-lg font-medium duration-300 text-center">LogOut</button>
+                                            </div>
+                                        </div>
 
-                                </div>
-                            </>
-                            :
-                            <Link to={'/login'} className="text-lg font-medium bg-blue-500 text-white px-8 py-3 rounded-xl duration-300">Login</Link>
-                    }
-                </div>
+                                    </div>
+                                </>
+                                :
+                                <Link to={'/login'} className="text-lg font-medium bg-blue-500 text-white px-8 py-3 rounded-xl duration-300">Login</Link>
+                        }
+                    </div>
             </nav>
         </div>
     );

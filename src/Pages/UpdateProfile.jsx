@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { useContext } from 'react';
 
+
 const UpdateProfile = () => {
     let location = useLocation();
     document.title = `Dream House | ${location.pathname.slice(1)}`
@@ -11,6 +12,8 @@ const UpdateProfile = () => {
     const { user, updatYourProfile } = useContext(AuthContext);
 
     const notify = ()=> toast('Your profile update successfully')
+
+    
 
     const handleUpdateProfile = (e)=>{
         e.preventDefault()
@@ -20,6 +23,7 @@ const UpdateProfile = () => {
         
         updatYourProfile(name, photo)
         notify()
+
     }
     
     return (

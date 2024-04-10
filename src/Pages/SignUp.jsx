@@ -6,6 +6,7 @@ import { updateProfile } from "firebase/auth";
 import auth from "../firebase/Firebase";
 import { FaRegEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
     const { createUser } = useContext(AuthContext);
@@ -15,6 +16,8 @@ const SignUp = () => {
     const [show, setShow] = useState(false)
     const [error, setError] = useState(null);
     const [errorRes,setErrorRes] = useState(null)
+
+    const navigate = useNavigate();
 
     const notify = ()=> toast('you sign up successfully')
 
@@ -42,6 +45,7 @@ const SignUp = () => {
 
         createUser(email, confirmPassword)
             .then(result => {
+                navigate(location?.state ? location.state : '/')
                 notify()
                 console.log(result.user);
                 updateProfile(auth.currentUser, {

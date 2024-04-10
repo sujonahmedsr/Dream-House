@@ -7,6 +7,7 @@ import auth from "../firebase/Firebase";
 import { FaRegEye, FaEyeSlash } from "react-icons/fa";
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     let location = useLocation();
@@ -18,6 +19,7 @@ const Login = () => {
     const { signInUser } = useContext(AuthContext);
 
     const notify = ()=> toast('you sign up successfully')
+    const navigate = useNavigate();
 
     const handleSignIn = (e) => {
         e.preventDefault();
@@ -29,7 +31,7 @@ const Login = () => {
             .then(res => {
                 notify()
                 console.log(res.user);
-                
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => setError(error))
     }
@@ -43,6 +45,7 @@ const Login = () => {
             .then(res => {
                 console.log(res.user);
                 notify();
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => setError(error))
     }
@@ -53,6 +56,7 @@ const Login = () => {
             .then(res => {
                 console.log(res.user);
                 notify()
+                navigate('/')
             })
             .catch(error => console.log(error));
     }
