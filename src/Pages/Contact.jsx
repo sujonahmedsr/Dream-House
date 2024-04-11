@@ -1,4 +1,8 @@
 import { useLocation } from 'react-router-dom';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import 'leaflet/dist/leaflet.css'
+
+
 const Contact = () => {
     let location = useLocation();
 
@@ -7,7 +11,7 @@ const Contact = () => {
         <div className="md:pt-20 pt-10 container mx-auto">
             <section>
                 <div className="grid max-w-6xl items-center grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x p-10">
-                    <div className="py-6 md:py-0 md:px-6">
+                    <div data-aos="fade-right" className="py-6 md:py-0 md:px-6">
                         <h1 className="text-4xl font-bold">Get in touch</h1>
                         <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
                         <div className="space-y-4">
@@ -32,14 +36,14 @@ const Contact = () => {
                             </p>
                         </div>
                     </div>
-                    <form className="flex flex-col py-6 space-y-6 p-3 md:p-10 md:px-6 shadow-xl rounded-lg">
+                    <form data-aos="fade-left" className="flex flex-col py-6 space-y-6 p-3 md:p-10 md:px-6 shadow-xl rounded-lg">
                         <label className="block">
                             <span className="mb-1">Full name</span>
                             <input type="text" name='name' placeholder="Your full name" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 px-4 py-3" />
                         </label>
                         <label className="block">
                             <span className="mb-1">Email address</span>
-                            <input type="email" name='email' placeholder="Your email" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 px-4 py-3" required/>
+                            <input type="email" name='email' placeholder="Your email" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 px-4 py-3" required />
                         </label>
                         <label className="block">
                             <span className="mb-1">Message</span>
@@ -49,6 +53,18 @@ const Contact = () => {
                     </form>
                 </div>
             </section>
+
+            <MapContainer data-aos="fade-down" className='h-[50vh]' center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={[51.505, -0.09]}>
+                    <Popup>
+                        A pretty CSS3 popup. <br /> Easily customizable.
+                    </Popup>
+                </Marker>
+            </MapContainer>
         </div>
     );
 };

@@ -8,18 +8,21 @@ import agent1 from '../../src/assets/agents/agents-01-540x460.jpg'
 import agent2 from '../../src/assets/agents/agents-02-540x460.jpg'
 import agent3 from '../../src/assets/agents/agents-03-540x460.jpg'
 import agent4 from '../../src/assets/agents/agents-04-540x460.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const About = () => {
     let location = useLocation();
     document.title = `Dream House | ${location.pathname.slice(1)}`
     return (
-        <div className="md:pt-20 pt-10 container mx-auto px-4">
-            <div className='text-center'>
+        <div className="pt-20 container mx-auto px-4">
+            <div data-aos="fade-down" className='text-center'>
                 <h1 className='text-3xl font-bold underline text-blue-600'>About Us</h1>
             </div>
             <div className='grid items-center grid-cols-1 md:grid-cols-2 gap-6 py-20'>
-                <img className='rounded-xl' src={aboutUs} alt="" />
-                <div className='space-y-10'>
+                <img data-aos="fade-right" className='rounded-xl' src={aboutUs} alt="" />
+                <div data-aos="fade-left" className='space-y-10'>
                     <h1 className='text-4xl font-bold'>Experience since 2001</h1>
                     <p> <span className='underline text-xl text-blue-600'>Our Goal</span> We have been working since 1999 to be sure you are getting the best Dream House service possible.
 
@@ -38,7 +41,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <div data-aos="fade-up" className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                 <div className='border p-10 rounded-lg space-y-3 hover:border-blue-600 duration-300 transition'>
                     <CiLocationOn className='text-5xl font-semibold text-blue-600'></CiLocationOn>
                     <h1 className='text-xl font-semibold'>Various Locations</h1>
@@ -56,7 +59,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='py-10'>
+            <div data-aos="fade-down" className='py-10'>
                 <h1 className='text-2xl text-blue-600 underline'>Our Agents</h1>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-5 transition-all'>
                     <div className='bg-white shadow-md hover:translate-y-4 duration-500 p-5 rounded-lg space-y-2'>
@@ -82,7 +85,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='bg-blue-300 px-2 rounded-lg'>
+            <div data-aos="fade-right" className='bg-blue-300 px-2 rounded-lg'>
                 <div className={`py-10 max-w-md mx-auto text-center space-y-3`}>
                     <h1 className='text-3xl font-semibold'>Subscribe to Our Newsletter</h1>
                     <p>Sign up to our newsletter and be the first to know about the latest company news, special offers, events, and discounts.</p>

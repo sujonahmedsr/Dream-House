@@ -29,11 +29,11 @@ const UpdateProfile = () => {
     return (
         <div className="pt-20 container mx-auto">
             <div className="grid max-w-6xl items-center grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x p-10">
-                <div className="py-6 md:py-0 md:px-6">
+                <div data-aos="fade-right" className="py-6 md:py-0 md:px-6">
                     
                     <img className='md:w-3/4' src={profile} />
                 </div>
-                <form onSubmit={handleUpdateProfile} className="flex flex-col py-6 space-y-6 p-3 md:p-10 md:px-6 shadow-xl rounded-lg max-w-md">
+                <form data-aos="fade-left" onSubmit={handleUpdateProfile} className="flex flex-col py-6 space-y-6 p-3 md:p-10 md:px-6 shadow-xl rounded-lg max-w-md">
                 <h1 className="text-4xl font-bold">Update Your Profile</h1>
                     <p className="pt-2 pb-4">You can update your name or profile picture</p>
                     <label className="block">
