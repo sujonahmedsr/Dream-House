@@ -17,6 +17,7 @@ import About from './Pages/About.jsx';
 import Contact from './Pages/Contact.jsx';
 import UpdateProfile from './Pages/UpdateProfile.jsx';
 import Private from './PrivateRoute/Private.jsx';
+import HouseRes from './components/Residential/HouseRes.jsx';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
           <UpdateProfile></UpdateProfile>
         </Private>
         
+      },
+      {
+        path: '/residntial/:id',
+        loader: ()=> fetch('/fakeDataForHouse.json'),
+        element: <HouseRes></HouseRes>,
       }
     ]
   },

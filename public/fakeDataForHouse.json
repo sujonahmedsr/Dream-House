@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Luxury Villa with Ocean View",
+        "segment_name": "Luxury",
+        "description": "Beautiful villa overlooking the ocean, perfect for those seeking tranquility and luxury living.",
+        "price": "$1,500,000",
+        "status": "sale",
+        "area": "5000 sq ft",
+        "location": "Malibu, California",
+        "facilities": [
+            "Swimming Pool",
+            "Spa",
+            "Home Theater"
+        ],
+        "image_url": "https://example.com/image1.jpg"
+    },
+    {
+        "id": 2,
+        "estate_title": "Cozy Townhouse in Suburban Neighborhood",
+        "segment_name": "Moderate",
+        "description": "Charming townhouse nestled in a friendly neighborhood, ideal for families.",
+        "price": "$350,000",
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "Maplewood, New Jersey",
+        "facilities": [
+            "Backyard Garden",
+            "Garage",
+            "Community Park"
+        ],
+        "image_url": "https://example.com/image2.jpg"
+    },
+    {
+        "id": 3,
+        "estate_title": "Luxury Penthouse in Downtown District",
+        "segment_name": "Luxury",
+        "description": "Elegant penthouse with panoramic city views, offering a luxurious urban lifestyle.",
+        "price": "$2,200,000",
+        "status": "sale",
+        "area": "3000 sq ft",
+        "location": "Manhattan, New York",
+        "facilities": [
+            "Private Terrace",
+            "Fitness Center",
+            "Concierge Service"
+        ],
+        "image_url": "https://example.com/image3.jpg"
+    },
+    {
+        "id": 4,
+        "estate_title": "Modern Loft in Artsy Neighborhood",
+        "segment_name": "Moderate",
+        "description": "Sleek loft with industrial chic design, situated in a vibrant arts district.",
+        "price": "$600,000",
+        "status": "sale",
+        "area": "2000 sq ft",
+        "location": "Williamsburg, Brooklyn",
+        "facilities": [
+            "Open Floor Plan",
+            "Art Studio",
+            "Roof Deck"
+        ],
+        "image_url": "https://example.com/image4.jpg"
+    },
+    {
+        "id": 5,
+        "estate_title": "Family Home with Mountain Views",
+        "segment_name": "Affordable",
+        "description": "Comfortable family home with stunning mountain vistas, perfect for outdoor enthusiasts.",
+        "price": "$250,000",
+        "status": "sale",
+        "area": "2200 sq ft",
+        "location": "Asheville, North Carolina",
+        "facilities": [
+            "Deck",
+            "Fireplace",
+            "Scenic Trails Nearby"
+        ],
+        "image_url": "https://example.com/image5.jpg"
+    },
+    {
+        "id": 6,
+        "estate_title": "Lakefront Cottage Retreat",
+        "segment_name": "Affordable",
+        "description": "Quaint cottage nestled by the lake, offering a serene retreat from city life.",
+        "price": "$180,000",
+        "status": "sale",
+        "area": "1500 sq ft",
+        "location": "Lake Tahoe, California",
+        "facilities": [
+            "Private Dock",
+            "Deck",
+            "Fire Pit"
+        ],
+        "image_url": "https://example.com/image6.jpg"
+    },
+    {
+        "id": 7,
+        "estate_title": "Executive Apartment in Urban Center",
+        "segment_name": "Luxury",
+        "description": "Executive apartment with modern amenities, located in the heart of a bustling city.",
+        "price": "$800,000",
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "Downtown Chicago, Illinois",
+        "facilities": [
+            "Gourmet Kitchen",
+            "Concierge Service",
+            "Fitness Center"
+        ],
+        "image_url": "https://example.com/image7.jpg"
+    },
+    {
+        "id": 8,
+        "estate_title": "Charming Victorian Home with Garden",
+        "segment_name": "Moderate",
+        "description": "Classic Victorian home with a lush garden, brimming with historic charm.",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "2500 sq ft",
+        "location": "Savannah, Georgia",
+        "facilities": [
+            "Wrap-around Porch",
+            "Vintage Fireplace",
+            "Guest Cottage"
+        ],
+        "image_url": "https://example.com/image8.jpg"
+    },
+    {
+        "id": 9,
+        "estate_title": "Beachfront Condo with Resort Amenities",
+        "segment_name": "Luxury",
+        "description": "Luxurious beachfront condo with access to resort-style amenities and breathtaking ocean views.",
+        "price": "$1,200,000",
+        "status": "sale",
+        "area": "2000 sq ft",
+        "location": "Miami Beach, Florida",
+        "facilities": [
+            "Infinity Pool",
+            "Private Beach Access",
+            "Spa"
+        ],
+        "image_url": "https://example.com/image9.jpg"
+    }
+]
