@@ -54,7 +54,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            <MapContainer data-aos="fade-down" className='h-[50vh]' center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
+            <MapContainer  data-aos="fade-down" className='h-[50vh] z-[-1]' center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

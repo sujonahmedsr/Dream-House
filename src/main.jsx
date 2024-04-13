@@ -58,7 +58,11 @@ const router = createBrowserRouter([
       {
         path: '/residntial/:id',
         loader: ()=> fetch('/fakeDataForHouse.json'),
-        element: <HouseRes></HouseRes>,
+        element: 
+        <Private>
+          <HouseRes></HouseRes>
+        </Private>
+        ,
       }
     ]
   },

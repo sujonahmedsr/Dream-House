@@ -11,7 +11,6 @@ const HouseRes = () => {
     const intId = parseInt(id);
 
     const selectId = houses.find(h => h.id === intId);
-    console.log(selectId);
 
     const { estate_title, segment_name, description, price, status, area, location, facilities, image_url } = selectId;
 
@@ -24,7 +23,7 @@ const HouseRes = () => {
     return (
         <>
             <div className='py-24 max-w-3xl mx-auto'>
-                <Link className="font-bold text-3xl" to={-1}><FaArrowLeft ></FaArrowLeft></Link>
+                <Link className="font-bold text-3xl" to={'/'}><FaArrowLeft ></FaArrowLeft></Link>
                 <div data-aos="fade-up" className="p-5 border rounded-lg shadow-xl flex flex-col hover:border-blue-400 transition duration-500 ">
                     <div className="relative">
                         <img src={image_url} alt="" className="object-fill w-full rounded-md h-80 dark:bg-gray-500" />
@@ -54,7 +53,6 @@ const HouseRes = () => {
                                     Area:  <span className='text-blue-600'>{area}</span></p>
                             </div>
                         </div>
-                        
                     </div>
                     <Link onClick={handleBooking} className={"text-lg font-medium bg-blue-500 text-white px-8 py-3 rounded-lg duration-300 text-center mt-2"}><button>{added ? 'Successfully added' : 'Booking Now'}</button></Link>
                 </div>
