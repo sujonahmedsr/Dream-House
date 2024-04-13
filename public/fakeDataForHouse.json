@@ -3,9 +3,9 @@
         "id": 1,
         "estate_title": "Luxury Villa with Ocean View",
         "segment_name": "Luxury",
-        "description": "Beautiful villa overlooking the ocean, perfect for those seeking tranquility and luxury living.",
+        "description": "Beautiful villa overlooking the ocean, perfect for those seeking tranquility and luxury living.Nestled on a pristine coastline, this stunning villa offers unparalleled views of the ocean, creating an oasis of serenity for those who appreciate the finer things in life. With lavish amenities and meticulous attention to detail, it's an ideal retreat for those seeking both tranquility and luxury living.",
         "price": "$1,500,000",
-        "status": "sale",
+        "status": "rent",
         "area": "5000 sq ft",
         "location": "Malibu, California",
         "facilities": [
@@ -13,13 +13,13 @@
             "Spa",
             "Home Theater"
         ],
-        "image_url": "https://example.com/image1.jpg"
+        "image_url": "https://i.ibb.co/dPnTNjY/luxury-villa-phuket.jpg"
     },
     {
         "id": 2,
         "estate_title": "Cozy Townhouse in Suburban Neighborhood",
         "segment_name": "Moderate",
-        "description": "Charming townhouse nestled in a friendly neighborhood, ideal for families.",
+        "description": "Charming townhouse nestled in a friendly neighborhood, ideal for families. This charming townhouse is nestled in a friendly neighborhood, making it an ideal haven for families. With its cozy atmosphere and welcoming community, it offers the perfect blend of comfort and convenience for those seeking a warm and inviting place to call home.",
         "price": "$350,000",
         "status": "sale",
         "area": "1800 sq ft",
@@ -29,15 +29,15 @@
             "Garage",
             "Community Park"
         ],
-        "image_url": "https://example.com/image2.jpg"
+        "image_url": "https://i.ibb.co/TTb3ryg/neighbour.jpg"
     },
     {
         "id": 3,
         "estate_title": "Luxury Penthouse in Downtown District",
         "segment_name": "Luxury",
-        "description": "Elegant penthouse with panoramic city views, offering a luxurious urban lifestyle.",
+        "description": "Elegant penthouse with panoramic city views, offering a luxurious urban lifestyle. Elegance meets urban sophistication in this stunning penthouse boasting panoramic city views. With its sleek design and luxurious amenities, it offers a lifestyle of opulence and refinement. Perfectly situated to immerse you in the vibrant energy of the city, yet providing a private retreat in the sky, it's the epitome of modern urban living.",
         "price": "$2,200,000",
-        "status": "sale",
+        "status": "rent",
         "area": "3000 sq ft",
         "location": "Manhattan, New York",
         "facilities": [
@@ -45,13 +45,13 @@
             "Fitness Center",
             "Concierge Service"
         ],
-        "image_url": "https://example.com/image3.jpg"
+        "image_url": "https://i.ibb.co/5WBSbhX/large-TEN50-Penthouse-1.jpg"
     },
     {
         "id": 4,
         "estate_title": "Modern Loft in Artsy Neighborhood",
         "segment_name": "Moderate",
-        "description": "Sleek loft with industrial chic design, situated in a vibrant arts district.",
+        "description": "Sleek loft with industrial chic design, situated in a vibrant arts district. Step into this sleek loft, where industrial chic design meets the vibrant energy of an arts district. Exposed brick walls, high ceilings, and raw, minimalist aesthetics create a unique ambiance that's both edgy and inviting. Perfectly situated to immerse you in the creativity and culture of the area, it's a haven for those who appreciate contemporary urban living with a touch of artistic flair.",
         "price": "$600,000",
         "status": "sale",
         "area": "2000 sq ft",
@@ -61,7 +61,7 @@
             "Art Studio",
             "Roof Deck"
         ],
-        "image_url": "https://example.com/image4.jpg"
+        "image_url": "https://i.ibb.co/DMyZ354/modern-Loft.jpg"
     },
     {
         "id": 5,
@@ -77,15 +77,15 @@
             "Fireplace",
             "Scenic Trails Nearby"
         ],
-        "image_url": "https://example.com/image5.jpg"
+        "image_url": "https://i.ibb.co/qNmKSj7/familyhouse.jpg"
     },
     {
         "id": 6,
         "estate_title": "Lakefront Cottage Retreat",
         "segment_name": "Affordable",
-        "description": "Quaint cottage nestled by the lake, offering a serene retreat from city life.",
+        "description": "Quaint cottage nestled by the lake, offering a serene retreat from city life. Welcome to your comfortable family home nestled amidst stunning mountain vistas, beckoning outdoor enthusiasts to embrace adventure at every turn. With spacious living areas and cozy nooks, it's a sanctuary where memories are made and shared. Step outside to explore nature's playground, from hiking trails to skiing slopes, offering endless opportunities for recreation and relaxation. Embrace the beauty of the great outdoors right from your doorstep in this idyllic retreat.",
         "price": "$180,000",
-        "status": "sale",
+        "status": "rent",
         "area": "1500 sq ft",
         "location": "Lake Tahoe, California",
         "facilities": [
@@ -93,13 +93,13 @@
             "Deck",
             "Fire Pit"
         ],
-        "image_url": "https://example.com/image6.jpg"
+        "image_url": "https://i.ibb.co/tD29mcy/lakeview.jpg"
     },
     {
         "id": 7,
         "estate_title": "Executive Apartment in Urban Center",
         "segment_name": "Luxury",
-        "description": "Executive apartment with modern amenities, located in the heart of a bustling city.",
+        "description": "Executive apartment with modern amenities, located in the heart of a bustling city. Indulge in the epitome of urban living with this executive apartment boasting modern amenities in the heart of a bustling city. From its sleek design to its convenient location, every detail is curated to cater to the discerning tastes of the urban professional. Whether you're enjoying the vibrant nightlife, exploring gourmet dining options, or simply relishing the convenience of city living, this apartment offers a luxurious retreat amidst the hustle and bustle of urban life.",
         "price": "$800,000",
         "status": "sale",
         "area": "1800 sq ft",
@@ -109,13 +109,13 @@
             "Concierge Service",
             "Fitness Center"
         ],
-        "image_url": "https://example.com/image7.jpg"
+        "image_url": "https://i.ibb.co/rkPJqH3/urbancenter.jpg"
     },
     {
         "id": 8,
         "estate_title": "Charming Victorian Home with Garden",
         "segment_name": "Moderate",
-        "description": "Classic Victorian home with a lush garden, brimming with historic charm.",
+        "description": "Classic Victorian home with a lush garden, brimming with historic charm. Step back in time and experience the timeless elegance of this classic Victorian home, nestled amidst a lush garden paradise. Brimming with historic charm and architectural character, every corner tells a story of a bygone era. From the intricate woodwork to the stained glass windows, each detail exudes craftsmanship and sophistication. Step outside to the enchanting garden oasis, where fragrant blooms and verdant foliage create a serene retreat for relaxation and contemplation. Embrace the romance of yesteryear in this enchanting haven that seamlessly blends the past with the present.",
         "price": "$400,000",
         "status": "sale",
         "area": "2500 sq ft",
@@ -125,15 +125,15 @@
             "Vintage Fireplace",
             "Guest Cottage"
         ],
-        "image_url": "https://example.com/image8.jpg"
+        "image_url": "https://i.ibb.co/rkMsHCB/gardenhouse.jpg"
     },
     {
         "id": 9,
         "estate_title": "Beachfront Condo with Resort Amenities",
         "segment_name": "Luxury",
-        "description": "Luxurious beachfront condo with access to resort-style amenities and breathtaking ocean views.",
+        "description": "Luxurious beachfront condo with access to resort-style amenities and breathtaking ocean views. Experience the epitome of coastal luxury in this beachfront condo, where every day feels like a vacation. With access to resort-style amenities and breathtaking ocean views, it's a sanctuary of relaxation and indulgence. From sunrise strolls along the pristine shoreline to sunset cocktails on your private balcony, every moment is infused with the beauty of seaside living. Whether you're lounging by the pool, unwinding at the spa, or exploring the vibrant local scene, this condo offers a lifestyle of unparalleled elegance and serenity by the sea.",
         "price": "$1,200,000",
-        "status": "sale",
+        "status": "rent",
         "area": "2000 sq ft",
         "location": "Miami Beach, Florida",
         "facilities": [
@@ -141,6 +141,9 @@
             "Private Beach Access",
             "Spa"
         ],
-        "image_url": "https://example.com/image9.jpg"
+        "image_url": "https://i.ibb.co/NVkNRwn/beach-Home.jpg"
     }
 ]
+
+
+
