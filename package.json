@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "firebase": "^10.10.0",
+    "firebase": "^10.11.0",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.8.0",
     "leaflet": "^1.9.4",
