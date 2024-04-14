@@ -22,7 +22,7 @@ const HouseRes = () => {
 
     return (
         <>
-            <div className='py-24 max-w-3xl mx-auto'>
+            <div className='py-24 max-w-3xl mx-auto px-3'>
                 <Link className="font-bold text-3xl" to={'/'}><FaArrowLeft ></FaArrowLeft></Link>
                 <div data-aos="fade-up" className="p-5 border rounded-lg shadow-xl flex flex-col hover:border-blue-400 transition duration-500 ">
                     <div data-aos="flip-right" className="relative">

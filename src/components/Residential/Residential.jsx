@@ -9,13 +9,13 @@ const Residential = () => {
             .then(data => setResidential(data));
     }, [])
     return (
-        <div className="container mx-auto py-10">
+        <div className="container mx-auto py-10 px-3">
             <div data-aos="fade-right" className="py-10 space-y-3 text-center max-w-md mx-auto">
                 <h1 className="text-3xl font-bold">Choose your home</h1>
                 <p>
                     Welcome to our house, where warmth meets innovation, and every corner resonates with creativity and community.</p>
             </div>
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     residentials.map(residential => <div data-aos="fade-up" key={residential.id} id={residential.id} className="p-5 border rounded-lg shadow-xl flex flex-col hover:border-blue-400 transition duration-500">
                         <div className="relative">
