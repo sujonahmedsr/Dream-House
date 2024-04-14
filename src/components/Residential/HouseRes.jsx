@@ -25,14 +25,14 @@ const HouseRes = () => {
             <div className='py-24 max-w-3xl mx-auto'>
                 <Link className="font-bold text-3xl" to={'/'}><FaArrowLeft ></FaArrowLeft></Link>
                 <div data-aos="fade-up" className="p-5 border rounded-lg shadow-xl flex flex-col hover:border-blue-400 transition duration-500 ">
-                    <div className="relative">
+                    <div data-aos="flip-right" className="relative">
                         <img src={image_url} alt="" className="object-fill w-full rounded-md h-80 dark:bg-gray-500" />
                         <div className="absolute bottom-0 right-0 bg-blue-600  text-white font-bold text-base px-3 py-2 rounded-l-md">
                             <h1>{status}</h1>
                         </div>
                     </div>
                     
-                    <div className="mt-6 mb-2 space-y-3 flex-grow">
+                    <div data-aos="fade-down" className="mt-6 mb-2 space-y-3 flex-grow">
                         <h1 className="text-blue-600 inline-block bg-blue-300 bg-opacity-50 text-base font-semibold px-3 py-2 rounded">{segment_name}</h1>
                         <h2 className="text-2xl font-bold tracking-wide">{estate_title}</h2>
                         <p>{description}</p>

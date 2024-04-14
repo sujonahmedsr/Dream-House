@@ -19,23 +19,16 @@ const Residential = () => {
                 {
                     residentials.map(residential => <div data-aos="fade-up" key={residential.id} id={residential.id} className="p-5 border rounded-lg shadow-xl flex flex-col hover:border-blue-400 transition duration-500">
                         <div className="relative">
-                            <img src={residential.image_url} alt="" className="object-fill w-full rounded-md h-80 dark:bg-gray-500" />
+                            <img data-aos="flip-right" src={residential.image_url} alt="" className="object-fill w-full rounded-md h-80 dark:bg-gray-500" />
                             <div className="absolute bottom-0 right-0 bg-blue-600  text-white font-bold text-base px-3 py-2 rounded-l-md">
                                 <h1>{residential.status}</h1>
                             </div>
                         </div>
 
-                        <div className="mt-6 mb-2 space-y-3 flex-grow">
+                        <div data-aos="fade-down" className="mt-6 mb-2 space-y-3 flex-grow">
                             <h1 className="text-blue-600 inline-block bg-blue-300 bg-opacity-50 text-base font-semibold px-3 py-2 rounded">{residential.segment_name}</h1>
                             <h2 className="text-2xl font-bold tracking-wide">{residential.estate_title}</h2>
-                            {/* <h1 className="text-xl font-bold">Faciliteis : ↓</h1> */}
-                            {/* {
-                                residential.facilities.map((facilitie, id) => <div className="font-semibold" key={id}>
-                                    <ul>
-                                        <li>{facilitie}</li>
-                                    </ul>
-                                </div>)
-                            } */}
+                            
                             <p className="text-gray-600 text-xl font-bold">Location: {residential.location}</p>
 
                             <div className="flex items-center justify-between font-medium">

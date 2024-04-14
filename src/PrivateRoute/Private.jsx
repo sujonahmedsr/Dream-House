@@ -5,8 +5,12 @@ import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 
 const Private = ({children}) => {
-    const {user} = useContext(AuthContext);
+    const {user, loading} = useContext(AuthContext);
     const location = useLocation();
+
+    if(loading){
+        return <p className="py-40 text-center"><span className="loading loading-bars loading-lg"></span></p>
+    }
 
     if(user){
         return children;
